@@ -17,6 +17,7 @@ variables:
   azureSubscription: 'AppLab2' #se coloca el nombre del servicio de conexion que se creo en azure devops
   webAppName: 'EjemploLab2' #Se coloca el nombre de la app que se creo en azure
 
+
 stages: #Etapas del pipeline
   - stage: Build #construcción y pruebas del proyecto
     displayName: 'Build y pruebas'
