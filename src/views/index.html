@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudOps Hub | DevOps y Computo en la Nube</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="badge">DevOps · Cloud Native · CI/CD · v1.0.0<!-- APP_VERSION --></p>
+      <h1>DevOps y Computo en la Nubeaa</h1>
+      <p class="subtitle">
+        Guías, recursos y buenas prácticas de ingeniería de software para
+        equipos que construyen y operan sistemas en la nube.
+      </p>
+      <nav class="hero-nav">
+        <a href="#practicas">Prácticas DevOps</a>
+        <a href="#cloud">Computo en la Nube</a>
+        <a href="#pipeline">Etapas del Pipeline</a>
+        <a href="/api/devops">API JSON</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- NOT_FOUND_NOTICE -->
+
+    <section id="practicas">
+      <h2>Prácticas clave de DevOps</h2>
+      <div class="grid">
+        
+          <article class="card">
+            <h3>Integración Continua (CI)</h3>
+            <p class="resumen">Combinar los cambios de todos los desarrolladores varias veces al día en un repositorio compartido.</p>
+            <p>Cada integración se verifica con una build automatizada y pruebas automáticas para detectar errores lo antes posible. Reduce los conflictos de integración y mantiene el código siempre en un estado desplegable.</p>
+            <ul class="tags">
+              
+                <li>Azure Pipelines</li>
+              
+                <li>GitHub Actions</li>
+              
+                <li>Jenkins</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card">
+            <h3>Entrega Continua (CD)</h3>
+            <p class="resumen">Automatizar el despliegue de cada cambio validado en un entorno de preparación o producción.</p>
+            <p>Los artefactos generados en la fase de build se publican mediante pipelines con aprobaciones manuales y estrategias como despliegue azul/verde o canary para minimizar el riesgo.</p>
+            <ul class="tags">
+              
+                <li>Azure Pipelines</li>
+              
+                <li>GitHub Actions</li>
+              
+                <li>ArgoCD</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card">
+            <h3>Infraestructura como Código (IaC)</h3>
+            <p class="resumen">Gestionar la infraestructura mediante archivos de definición versionados en el repositorio.</p>
+            <p>Permite crear, modificar y destruir entornos de forma reproducible y auditable. Los cambios en la infraestructura se revisan mediante pull requests igual que el código de la aplicación.</p>
+            <ul class="tags">
+              
+                <li>Terraform</li>
+              
+                <li>Bicep</li>
+              
+                <li>ARM Templates</li>
+              
+                <li>Pulumi</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card">
+            <h3>Monitorización y Observabilidad</h3>
+            <p class="resumen">Recopilar métricas, logs y trazas para conocer el estado real de la aplicación en producción.</p>
+            <p>Los dashboards y alertas permiten detectar incidentes antes de que los usuarios los noten, y alimentan el ciclo de mejora continua con datos reales del funcionamiento del sistema.</p>
+            <ul class="tags">
+              
+                <li>Azure Monitor</li>
+              
+                <li>Application Insights</li>
+              
+                <li>Prometheus</li>
+              
+                <li>Grafana</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card">
+            <h3>DevSecOps</h3>
+            <p class="resumen">Integrar la seguridad en todas las fases del ciclo de desarrollo, no solo al final.</p>
+            <p>Incluye análisis estático de código (SAST), escaneo de dependencias, análisis de contenedores y pruebas de seguridad automatizadas dentro del pipeline de CI/CD.</p>
+            <ul class="tags">
+              
+                <li>Dependabot</li>
+              
+                <li>SonarQube</li>
+              
+                <li>Trivy</li>
+              
+                <li>Microsoft Defender for Cloud</li>
+              
+            </ul>
+          </article>
+        
+      </div>
+    </section>
+
+    <section id="cloud">
+      <h2>Conceptos de computo en la nube</h2>
+      <div class="grid">
+        
+          <article class="card card-cloud">
+            <h3>Modelos de servicio en la nube</h3>
+            <p class="resumen">IaaS, PaaS y SaaS: distintos niveles de responsabilidad entre el usuario y el proveedor.</p>
+            <p>En IaaS se gestionan el sistema operativo y las aplicaciones; en PaaS solo el código y los datos; en SaaS solo el uso del producto. Azure DevOps es un servicio SaaS para el ciclo de desarrollo.</p>
+            <ul class="tags">
+              
+                <li>IaaS</li>
+              
+                <li>PaaS</li>
+              
+                <li>SaaS</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card card-cloud">
+            <h3>Escalabilidad y elasticidad</h3>
+            <p class="resumen">Capacidad de crecer o reducir recursos según la demanda de forma automática.</p>
+            <p>La escalabilidad vertical aumenta la potencia de una máquina; la horizontal añade más instancias. La elasticidad ajusta la infraestructura automáticamente para optimizar costos.</p>
+            <ul class="tags">
+              
+                <li>Autoescalado</li>
+              
+                <li>Balanceo de cargas</li>
+              
+                <li>Costo optimizado</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card card-cloud">
+            <h3>Contenedores y orquestación</h3>
+            <p class="resumen">Empaquetar la aplicación con sus dependencias para ejecutarla de forma consistente en cualquier entorno.</p>
+            <p>Docker estandariza la imagen del contenedor y Kubernetes orquesta su despliegue, escalado y recuperación ante fallos. Ambos son piezas clave de las arquitecturas modernas en la nube.</p>
+            <ul class="tags">
+              
+                <li>Docker</li>
+              
+                <li>Kubernetes</li>
+              
+                <li>Azure Kubernetes Service</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card card-cloud">
+            <h3>DevOps en la nube</h3>
+            <p class="resumen">Servicios gestionados que cubren todo el ciclo de desarrollo: planificar, construir, probar y desplegar.</p>
+            <p>Azure DevOps integra Repositorios, Boards, Pipelines y Artifacts en un solo servicio. Las pipelines pueden desplegar a Azure App Service, AKS, Azure Functions o VMs con tan solo definir un archivo YAML.</p>
+            <ul class="tags">
+              
+                <li>Azure DevOps</li>
+              
+                <li>Azure Pipelines</li>
+              
+                <li>Azure Repos</li>
+              
+            </ul>
+          </article>
+        
+          <article class="card card-cloud">
+            <h3>Fiabilidad y recuperación ante desastres</h3>
+            <p class="resumen">Diseñar sistemas que toleran fallos y permiten restaurar el servicio rápidamente.</p>
+            <p>Incluye redundancia multi-región, copias de seguridad automáticas, los acuerdos de nivel de servicio (SLA) y los objetivos de tiempo de recuperación (RTO/RPO).</p>
+            <ul class="tags">
+              
+                <li>SLA</li>
+              
+                <li>RTO/RPO</li>
+              
+                <li>Alta disponibilidad</li>
+              
+            </ul>
+          </article>
+        
+      </div>
+    </section>
+
+    <section id="pipeline">
+      <h2>Etapas de un pipeline de despliegue</h2>
+      <ol class="stages">
+        
+          <li>
+            <strong>1. Repositorio</strong>
+            <span>El código se versiona en Azure Repos o GitHub y los cambios entran mediante ramas y pull requests.</span>
+          </li>
+        
+          <li>
+            <strong>2. Build</strong>
+            <span>El pipeline compila la aplicación, ejecuta las pruebas y genera un artefacto versionado.</span>
+          </li>
+        
+          <li>
+            <strong>3. Análisis</strong>
+            <span>Se ejecutan escaneos de seguridad y calidad de código (lint, SAST, dependencias).</span>
+          </li>
+        
+          <li>
+            <strong>4. Despliegue a QA</strong>
+            <span>El artefacto se publica en un entorno de pruebas automatizadas para validación.</span>
+          </li>
+        
+          <li>
+            <strong>5. Aprobación</strong>
+            <span>Una validación manual o automática habilita el paso a producción.</span>
+          </li>
+        
+          <li>
+            <strong>6. Producción</strong>
+            <span>Despliegue progresivo con monitorización y posibilidad de reversión rápida.</span>
+          </li>
+        
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        CloudOps Hub · Node.js + Express ·
+        CI/CD con GitHub Actions y Azure Pipelines
+      </p>
+      <p class="endpoints">
+        Endpoints disponibles:
+        <a href="/api/devops">/api/devops</a> ·
+        <a href="/api/cloud">/api/cloud</a> ·
+        <a href="/api/pipeline">/api/pipeline</a> ·
+        <a href="/health">/health</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
